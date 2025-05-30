@@ -1,27 +1,14 @@
-import React from 'react';
-import PostCard from '../../components/common/PostCard';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
+import Header from "../../components/layout/Header";
 
-const PostsPage: React.FC = () => {
-  // Dummy data for now
-  const posts = [
-    { id: 1, title: 'First Post', body: 'This is the body of the first post' },
-    { id: 2, title: 'Second Post', body: 'This is the body of the second post' },
-  ];
-
+const Posts: React.FC = () => {
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <Header />
-      <main className="max-w-4xl mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-6">Posts</h1>
-        {posts.map((post) => (
-          <PostCard key={post.id} title={post.title} body={post.body} />
-        ))}
+      <main className="flex-grow flex items-center justify-center bg-white">
+        <h1 className="text-3xl font-bold">Posts Page</h1>
       </main>
-      <Footer />
-    </>
+    </div>
   );
 };
 
-export default PostsPage;
+export default Posts;
